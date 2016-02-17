@@ -1,0 +1,142 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{1774b296-0469-4f51-b2f3-0dd03bae6c5b}</ProjectGuid>
+			<MainSource>Interpreter.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>BIN\Interpreter.exe</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.0</ProjectVersion>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>Interpreter.exe</DCC_DependencyCheckOutputName>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_DependencyCheckOutputName>BIN\Interpreter.exe</DCC_DependencyCheckOutputName>
+			<Version>7.0</Version>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_ExeOutput>BIN</DCC_ExeOutput>
+			<DCC_DcuOutput>UNITS</DCC_DcuOutput>
+			<DCC_ObjOutput>UNITS</DCC_ObjOutput>
+			<DCC_HppOutput>UNITS</DCC_HppOutput>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Interpreter.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Main_unit.pas">
+				<Form>frmMain</Form>
+			</DCCReference>
+			<DCCReference Include="Console_u.pas">
+				<Form>wndConsole</Form>
+			</DCCReference>
+			<DCCReference Include="OGL_u.pas">
+				<Form>wndOpenGL</Form>
+			</DCCReference>
+			<DCCReference Include="NewFile_u.pas">
+				<Form>dlgNewFile</Form>
+			</DCCReference>
+			<DCCReference Include="Vars_u.pas">
+				<Form>wndVariables</Form>
+			</DCCReference>
+			<DCCReference Include="Editor_u.pas">
+				<Form>wndCode</Form>
+			</DCCReference>
+			<DCCReference Include="GDI_u.pas">
+				<Form>wnd2D</Form>
+			</DCCReference>
+			<DCCReference Include="Icons_u.pas"/>
+			<DCCReference Include="Setup_u.pas">
+				<Form>dlgSetup</Form>
+			</DCCReference>
+			<DCCReference Include="About_u.pas">
+				<Form>dlgAbout</Form>
+			</DCCReference>
+			<DCCReference Include="AddVar_u.pas">
+				<Form>dlgAddVar</Form>
+			</DCCReference>
+			<DCCReference Include="Debug_u.pas">
+				<Form>wndDebugger</Form>
+			</DCCReference>
+			<DCCReference Include="Project_struct_u.pas">
+				<Form>dlgProjectStruct</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">1</VersionInfo>
+						<VersionInfo Name="Release">4</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">M.A.D.M.A.N. Software</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">[Atomic Calculator] - &quot;Interpreter&quot; &amp; Compiler</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.1.4.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">AC.exe</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">M.A.D.M.A.N. Software</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">M.A.D.M.A.N. Software</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">interpreter.exe</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">[Atomic Calculator] - &quot;Interpreter&quot;</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.1.4.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">Interpreter.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

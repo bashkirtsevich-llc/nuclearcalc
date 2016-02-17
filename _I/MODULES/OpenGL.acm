@@ -1,0 +1,19 @@
+void InitOpenGL
+{
+	Init3D(_CREATE);
+	glLinewidth(1);
+	glNewList("Simply");
+	DrawAxis(1,1,1);
+	DrawGrids(1,0,0);
+}
+
+void FinalzeOpenGL
+{
+	glEnd(_GL_LINES);
+	glEndList("Simply");
+}
+
+void FreeOpenGL
+{
+	Init3D(_FREE);
+}

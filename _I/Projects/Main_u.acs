@@ -1,0 +1,56 @@
+  /* There is a test program */
+  Include("GDI.acm");
+  Include("OpenGL.acm");
+  X:=-10;
+  Y:=-10;
+  Z:=0;
+  Z1:=0;
+  Step:=0.1;
+    call InitOpenGL;
+    call InitGDI;
+    SetBuffSize(2048);
+    glBegin(_GL_LINES);
+      glColor3f(0.7,0.7,0.7);
+      While X<=10 Do
+      {
+		call Next_x;
+		while y<=10 do
+		{
+			call Next_y;
+			call Compute_z;
+			glVertex3f(X-Step,y,Z1);
+			glVertex3f(X,y,Z);
+			glVertex3f(X,y-Step,Z);
+			glVertex3f(X,y,Z);
+		}
+		y:=-10;
+      }
+	call FinalzeOpenGL;
+  x:=-10;
+  While x<=10 do
+  {
+	call Compute_y;
+	MoveToXY(x-Step,y1);
+	LineToXY(x,y);
+	call Next_x;
+  }
+call DrawGDI;
+End.
+void Next_x
+{
+  X:=X+Step;
+}
+void next_y
+{
+  y:=y+Step;
+}
+void Compute_z
+{
+  z:=Sin(x);
+  Z1:=Sin(x-Step);
+}
+void Compute_y
+{
+  y:=Sin(x);
+  y1:=Sin(x-Step);
+}

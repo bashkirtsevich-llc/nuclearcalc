@@ -1,0 +1,5 @@
+void Sign
+{
+  if sign>0 then {sign:=1}
+  else {sign:=-1}
+}

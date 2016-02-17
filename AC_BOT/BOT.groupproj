@@ -1,0 +1,40 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8bf5a4d8-3358-4fcd-852f-c86fd8e453f3}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="AC_BV">
+    <MSBuild Projects="AC_BV.dproj" Targets="" />
+  </Target>
+  <Target Name="AC_BV:Clean">
+    <MSBuild Projects="AC_BV.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="AC_BV:Make">
+    <MSBuild Projects="AC_BV.dproj" Targets="Make" />
+  </Target>
+  <Target Name="AC_Core">
+    <MSBuild Projects="CORE\AC_Core.dproj" Targets="" />
+  </Target>
+  <Target Name="AC_Core:Clean">
+    <MSBuild Projects="CORE\AC_Core.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="AC_Core:Make">
+    <MSBuild Projects="CORE\AC_Core.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="AC_BV;AC_Core" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="AC_BV:Clean;AC_Core:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="AC_BV:Make;AC_Core:Make" />
+  </Target>
+</Project>

@@ -1,0 +1,19 @@
+void InitGDI
+{
+	Init2D(_CREATE);
+}
+
+void DrawGDI
+{
+	Draw2D(void);
+}
+
+void ClearBuff
+{
+	SetBuffSize(0);
+}
+
+void FreeGDI
+{
+	Init2D(_FREE);
+}

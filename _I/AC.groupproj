@@ -1,0 +1,50 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{5d01fdd1-bf49-4319-ab09-607e346273f9}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="ACI_PE\ACI_PE.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Interpreter.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<BorlandProject>
+					<Default.Personality/>
+				</BorlandProject>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="ACI_PE">
+			<MSBuild Projects="ACI_PE\ACI_PE.dproj"/>
+		</Target>
+		<Target Name="ACI_PE:Clean">
+			<MSBuild Targets="Clean" Projects="ACI_PE\ACI_PE.dproj"/>
+		</Target>
+		<Target Name="ACI_PE:Make">
+			<MSBuild Targets="Make" Projects="ACI_PE\ACI_PE.dproj"/>
+		</Target>
+		<Target Name="Interpreter">
+			<MSBuild Projects="Interpreter.dproj"/>
+		</Target>
+		<Target Name="Interpreter:Clean">
+			<MSBuild Targets="Clean" Projects="Interpreter.dproj"/>
+		</Target>
+		<Target Name="Interpreter:Make">
+			<MSBuild Targets="Make" Projects="Interpreter.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="ACI_PE;Interpreter"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="ACI_PE:Clean;Interpreter:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="ACI_PE:Make;Interpreter:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

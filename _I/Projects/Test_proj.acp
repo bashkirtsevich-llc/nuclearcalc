@@ -1,0 +1,10 @@
+[Main]
+Project_name=Test_proj.exe
+Create=31.01.2009 21:31:18
+Copyright=[AC]
+Out_dir=D:\Nuclear_Calc\_I\Projects\
+[Files]
+Script=Main_u.acs
+Variables=Main_u.acv
+Icon=idag.ico
+Modules=

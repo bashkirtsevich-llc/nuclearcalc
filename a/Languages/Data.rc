@@ -1,0 +1,238 @@
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+1, 	"English language plugin for [AC]"
+2, 	"(c) M.A.D.M.A.N."
+3, 	"Function:"
+4, 	"Function result:"
+5, 	"File"
+6, 	"Clear"
+7, 	"-"
+8, 	"Save"
+9, 	"Open"
+10, 	"-"
+11, 	"Exit"
+12, 	"Edit"
+13, 	"Copy"
+14, 	"-"
+15, 	"Paste"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+16, 	"Memory"
+17, 	"Add to memory"
+18, 	"Memory list"
+19, 	"-"
+20, 	"Clear variables"
+21, 	"Variable list"
+22, 	"-"
+23, 	"Show/Hide log"
+24, 	"Configuration"
+25, 	"Setup"
+26, 	"-"
+27, 	"Language"
+28, 	"Mode"
+29, 	"2D/3D plotter"
+30, 	"Integral computer"
+31, 	"Numercial row computer"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+32,	"Help"
+33,	"Help"
+34,	"About"
+35,	"Trigonometric"
+36,	"Hyperbolic"
+37,	"Mathematic"
+38,	"Numercial"
+39,	"Constants"
+40,	"Functions #1"
+41,	"Functions #2"
+42,	"Functions #3"
+43,	"Logic"
+44,	"Restore"
+45,	"Exit"
+46, 	"Cut"
+47,	"Copy"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+48,	"Paste"
+49,	"Delete"
+50,	"Select all"
+51,	"Error"
+52,	"Information"
+53,	"Warning"
+54,	"Question"
+55,	"Save memory statistic?"
+56,	"Coud not open file"
+57,	"Invalid formula"
+58,	"Function='%s' Result='%s'"
+59,	"Ok"
+60,	"Cancel"
+61,	"Add variable"
+62,	"Global variables"
+63,	"Variable name"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+64,	"Variable value"
+65,	"Add variable"
+66,	"Delete variable"
+67,	"Variable"
+68,	"Enter variable value"
+69,	"Add variable"
+70,	"Variable name"
+71,	"Variable value"
+72,	"Setup"
+73,	"Startup mode"
+74,	"Log config"
+75,	"Keys"
+76,	"Aliases"
+77,	"Startup mode"
+78,	"Default mode:"
+79,	"Calculator"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+80,	"2D/3D plotter"
+81,	"Show startup splash"
+82,	"Display log memo"
+83,	"Remember and restore window position"
+84,	"Log config"
+85,	"Save log data"
+86,	"Save dir:"
+87,	"Move log memo with main window"
+88,	"Keys"
+89,	"Calculate action:"
+90,	"Return action:"
+91,	"Clear after computing"
+92,	"Return after computing"
+93,	"Aliases"
+94,	"Enable aliases"
+95,	"Aliase name:"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+96,	"New"
+97,	"Open"
+98,	"Save"
+99,	"Mode"
+100,	"Config"
+101,	"Help"
+102,	"2D Graph"
+103,	"3D Graph"
+104,	"Calculator"
+105,	"Integral computer"
+106,	"Restore"
+107,	"Close"
+108,	"Help"
+109,	"About"
+110,	"File"
+111,	"New"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+112,	"2D Graph"
+113,	"3D Graph"
+114,	"Save"
+115,	"Open"
+116,	"Close"
+117,	"Close all"
+118,	"Exit"
+119,	"Configuration"
+120,	"Setup"
+121,	"Plotter configuration"
+122,	"Mode"
+123,	"Calculator"
+124,	"Integral computer"
+125,	"Numercial row computer"
+126,	"Help"
+127,	"Help"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+128,	"About"
+129,	"Function:"
+130,	"X min:"
+131,	"X max:"
+132,	"X div:"
+133,	"Color:"
+134,	"Grid"
+135,	"Draw grid"
+136,	"Y axis:"
+137,	"X axis:"
+138,	"Axis"
+139,	"Draw X axis"
+140,	"Draw Y axis"
+141,	"Graphics"
+142,	"Out of the limit"
+143,	"Draw graph"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+144,	"Function:"
+145,	"X min:"
+146,	"Y min:"
+147,	"X max:"
+148,	"Y max:"
+149,	"X div:"
+150,	"Y div:"
+151,	"Color:"
+152,	"Axis"
+153,	"Draw X axis"
+154,	"Draw Y axis"
+155,	"Draw Z axis"
+156,	"Grids"
+157,	"Draw XY grid"
+158,	"Draw YZ grid"
+159,	"Draw ZX grid"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+160,	"Graphics"
+161,	"Linear"
+162,	"Cylinder"
+163,	"Sphere"
+164,	"Out of the limit"
+165,	"Draw graphic"
+166,	"Configuration"
+167,	"Interface"
+168,	"Color"
+169,	"Tool bar"
+170,	"Show tool bar captions"
+171,	"Show hints"
+172,	"Show tool bar"
+173,	"Language:"
+174,	"Minimize to tray"
+175,	"2D plotter"
+}
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+176,	"3D plotter"
+}
